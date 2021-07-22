@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# Adelaide Chopard
 
-You can use the [editor on GitHub](https://github.com/Achopard/Achopard.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Steps for Setup:
 
-### Markdown
+### Make sure you have Ruby
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+First, make sure you have [Ruby](https://www.ruby-lang.org/en/) installed. You can confirm this by running `ruby -v` on the command line:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+$ ruby -v
+ruby [version number] (date) [your platform]
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+If you get something like `"Error, command not found"` visit the link above and
+install Ruby for your platform.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Achopard/Achopard.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Make sure you have Bundler
 
-### Support or Contact
+Next, make sure you have [Bundler](https://bundler.io) installed. Just like
+above, run `bundle -v` on the command line:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```sh
+$ bundle -v
+bundle [version number]
+```
+
+If you get `"Error, command not found"` run `gem install bundler` to install it
+using RubyGems.
+
+### Run this repository
+
+Clone the repository, and `cd` into it:
+```sh
+$ git clone https://github.com/ndrewtl/airspace-jekyll.git
+$ cd airspace-jekyll
+```
+
+Install dependencies locally:
+```sh
+$ bundle install --path vendor/bundle
+```
+
+This should install a local copy of jekyll.
+
+Now run the server:
+```sh
+$ ./vendor/bundle/ruby/#{YOUR_RUBY_VERSION}/bin/jekyll server
+```
